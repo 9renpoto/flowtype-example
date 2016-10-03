@@ -1,5 +1,5 @@
 {
-  "name": "@9renpoto/react-flux-example",
+  "name": "@9renpoto/js",
   "description": "js flowtype-based",
   "version": "0.0.0",
   "author": "9renpoto",
@@ -17,8 +17,6 @@
     "babel-jest": "^16.0.0",
     "babel-plugin-transform-flow-strip-types": "^6.14.0",
     "babel-preset-es2015": "^6.14.0",
-    "babelify": "^7.3.0",
-    "browserify": "^13.1.0",
     "eslint": "^3.5.0",
     "eslint-plugin-flowtype": "^2.18.1",
     "flow-bin": "^0.33.0",
@@ -35,7 +33,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/9renpoto/react-flux-example.git"
+    "url": "git+ssh://git@github.com/9renpoto/js.git"
   },
   "scripts": {
     "lint": "npm-run-all -p lint:*",
