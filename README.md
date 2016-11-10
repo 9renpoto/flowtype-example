@@ -6,11 +6,8 @@ study frontend with flow-type
 
 ## Feature
 
-- babel
 - test
-  - jest
-- coverage
-  - codecov
+  - jsx coverage
 
 ## LICENSE
 

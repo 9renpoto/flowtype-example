@@ -1,3 +1,5 @@
+flow-typed/
+
 # Logs
 logs
 *.log
