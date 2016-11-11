@@ -7,8 +7,7 @@
     "url": "https://github.com/9renpoto/js/issues"
   },
   "devDependencies": {
-    "@9renpoto/eslint-config": "^1.4.0",
-    "babel-eslint": "^7.1.0",
+    "@9renpoto/eslint-config-flowtype": "0.0.2",
     "babel-plugin-istanbul": "^2.0.3",
     "babel-plugin-transform-flow-strip-types": "^6.18.0",
     "babel-preset-latest": "^6.16.0",
@@ -16,13 +15,12 @@
     "babel-register": "^6.18.0",
     "codecov": "^1.0.1",
     "eslint": "^3.9.1",
-    "eslint-plugin-flowtype": "^2.25.0",
     "flow-bin": "^0.34.0",
     "flow-typed": "^2.0.0",
     "mocha": "^3.1.2",
     "npm-run-all": "^3.1.1",
     "nyc": "^8.4.0",
-    "power-assert": "^1.4.1"
+    "power-assert": "^1.4.2"
   },
   "homepage": "https://github.com/9renpoto/js#readme",
   "keywords": [
