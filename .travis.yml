@@ -9,6 +9,7 @@ cache:
   - node_modules
 after_success:
 - npm run coverage
+- '[ "$TRAVIS_BRANCH" == master ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && npm run deploy'
 notifications:
   email: false
   slack:
