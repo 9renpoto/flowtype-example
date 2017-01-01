@@ -23,7 +23,7 @@
     "mocha": "^3.1.2",
     "npm-run-all": "^4.0.0",
     "nyc": "^10.0.0",
-    "power-assert": "^1.4.2"
+    "power-assert": "^1.4.2",
     "rimraf": "^2.5.4",
     "webpack": "^1.14.0",
     "webpack-closure-compiler": "^2.1.2"
