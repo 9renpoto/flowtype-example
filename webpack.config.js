@@ -12,14 +12,12 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel' }
+      { test: /\.js$/, loader: 'babel', exclude: /node_modules/ }
     ]
   },
   plugins: [
     new ClosureCompilerPlugin({
       compiler: {
-        language_in: 'ECMASCRIPT6',
-        language_out: 'ECMASCRIPT5',
         compilation_level: 'ADVANCED'
       },
       concurrency: 3
