@@ -6,6 +6,7 @@
   "bugs": {
     "url": "https://github.com/9renpoto/js/pulls"
   },
+  "dependencies": {},
   "devDependencies": {
     "@9renpoto/eslint-config-flowtype": "^0.0.2",
     "babel-loader": "^6.2.10",
@@ -20,6 +21,7 @@
     "flow-bin": "^0.37.0",
     "flow-typed": "^2.0.0",
     "ghpages": "0.0.8",
+    "json-loader": "^0.5.4",
     "karma": "^1.4.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-coverage": "^1.1.1",

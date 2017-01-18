@@ -11,7 +11,7 @@ module.exports = function (config) {
     },
     webpack: {
       module: webpackConfig.module,
-      target: 'node'
+      node: { fs: 'empty' }
     },
     reporters: ['mocha', 'coverage'],
     browsers: ['Chrome', 'Firefox', 'PhantomJS'],
