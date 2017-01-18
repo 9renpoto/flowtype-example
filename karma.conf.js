@@ -14,7 +14,7 @@ module.exports = function (config) {
       target: 'node'
     },
     reporters: ['mocha', 'coverage'],
-    browsers: ['Chrome', 'Firefox', 'PhantomJS', 'Opera'],
+    browsers: ['Chrome', 'Firefox', 'PhantomJS'],
     singleRun: true
   })
 }
