@@ -9,8 +9,8 @@
   "devDependencies": {
     "@9renpoto/eslint-config-flowtype": "^0.0.2",
     "babel-loader": "^6.2.10",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
     "babel-plugin-transform-flow-strip-types": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
     "babel-preset-power-assert": "^1.0.0",
     "babel-register": "^6.18.0",
     "babelify": "^7.3.0",
@@ -30,6 +30,7 @@
     "karma-webpack": "^2.0.1",
     "mocha": "^3.1.2",
     "npm-run-all": "^4.0.0",
+    "nyc": "^10.1.2",
     "phantomjs-prebuilt": "^2.1.14",
     "power-assert": "^1.4.2",
     "rimraf": "^2.5.4",
@@ -54,7 +55,7 @@
     "build:browserify": "browserify src/foo.js -t babelify -o dist/browserify.bundle.js",
     "build:webpack": "webpack",
     "clean": "rimraf dist && mkdir dist",
-    "coverage": "codecov",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "deploy": "ghpages --path dist",
     "lint": "npm-run-all -p lint:*",
     "lint:flow": "flow",
@@ -63,7 +64,7 @@
     "predeploy": "npm run build",
     "test": "npm-run-all -p test:*",
     "test:karma": "karma start",
-    "test:mocha": "mocha -- test",
-    "test:lint": "npm run lint"
+    "test:lint": "npm run lint",
+    "test:mocha": "nyc mocha -- test"
   }
 }
