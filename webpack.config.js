@@ -1,3 +1,4 @@
+/* @flow */
 const ClosureCompilerPlugin = require('webpack-closure-compiler')
 const path = require('path')
 
@@ -12,14 +13,13 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel' }
+      { test: /\.js$/, loader: 'babel', exclude: /node_modules/ },
+      { test: /\.json$/, loader: 'json' }
     ]
   },
   plugins: [
     new ClosureCompilerPlugin({
       compiler: {
-        language_in: 'ECMASCRIPT6',
-        language_out: 'ECMASCRIPT5',
         compilation_level: 'ADVANCED'
       },
       concurrency: 3
