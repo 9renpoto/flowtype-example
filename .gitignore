@@ -1,4 +1,5 @@
 dist/
+flow-typed/
 
 # Logs
 logs
