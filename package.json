@@ -18,7 +18,7 @@
     "browserify": "^13.1.1",
     "codecov": "^1.0.1",
     "eslint": "^3.9.1",
-    "flow-bin": "^0.37.0",
+    "flow-bin": "^0.38.0",
     "flow-typed": "^2.0.0",
     "ghpages": "0.0.8",
     "json-loader": "^0.5.4",
