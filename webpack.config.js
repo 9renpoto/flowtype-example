@@ -2,6 +2,8 @@
 const ClosureCompilerPlugin = require('webpack-closure-compiler')
 const path = require('path')
 
+const module = require('./webpack/module')
+
 module.exports = {
   entry: {
     'loader': path.join(__dirname, 'src/loader.js'),
@@ -11,12 +13,7 @@ module.exports = {
     path: path.join(__dirname, 'dist/'),
     filename: '[name].bundle.js'
   },
-  module: {
-    loaders: [
-      { test: /\.js$/, loader: 'babel', exclude: /node_modules/ },
-      { test: /\.json$/, loader: 'json' }
-    ]
-  },
+  module,
   plugins: [
     new ClosureCompilerPlugin({
       compiler: {
