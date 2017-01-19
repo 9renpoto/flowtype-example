@@ -1,4 +1,4 @@
-const webpackConfig = require('./webpack.config')
+const m = require('./webpack/module')
 
 module.exports = function (config) {
   config.set({
@@ -10,8 +10,23 @@ module.exports = function (config) {
       'test/*.js': ['webpack']
     },
     webpack: {
-      module: webpackConfig.module,
+      module: {
+        loaders: m.loaders.concat([{
+          test: /\.js$/,
+          loader: 'babel-istanbul',
+          exclude: /node_modules/,
+          query: {
+            cacheDirectory: true
+          }
+        }])
+      },
       node: { fs: 'empty' }
+    },
+    coverageReporter: {
+      reporters: [
+        {type: 'lcov'},
+        {type: 'text'}
+      ]
     },
     reporters: ['mocha', 'coverage'],
     browsers: ['Firefox', 'PhantomJS'],
