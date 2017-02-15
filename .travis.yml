@@ -22,7 +22,7 @@ before_install:
 script:
 - npm run test:$TEST
 after_success:
-- npm run coverage
+- npm run coverage:$TEST
 - '[ "$TRAVIS_BRANCH" == master ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && npm run deploy'
 notifications:
   email: false
