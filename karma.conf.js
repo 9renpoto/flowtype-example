@@ -10,16 +10,7 @@ module.exports = function (config) {
       'test/*.js': ['webpack']
     },
     webpack: {
-      module: {
-        loaders: m.loaders.concat([{
-          test: /\.js$/,
-          loader: 'babel-istanbul',
-          exclude: /node_modules/,
-          query: {
-            cacheDirectory: true
-          }
-        }])
-      },
+      module: { loaders: m.loaders },
       node: { fs: 'empty' }
     },
     coverageReporter: {
