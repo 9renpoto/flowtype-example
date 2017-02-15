@@ -10,7 +10,7 @@
   "devDependencies": {
     "@9renpoto/eslint-config-flowtype": "^0.1.1",
     "babel-istanbul-loader": "^0.1.0",
-    "babel-loader": "^6.2.10",
+    "babel-loader": "^6.3.1",
     "babel-plugin-transform-flow-strip-types": "^6.18.0",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-power-assert": "^1.0.0",
