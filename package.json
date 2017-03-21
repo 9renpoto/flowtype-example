@@ -55,7 +55,6 @@
   "scripts": {
     "appveyor:test": "nyc mocha -- .tmp/test",
     "build": "npm-run-all -p build:*",
-    "build:babel": "babel src  --out-dir .tmp/src/ && babel test --out-dir .tmp/test/",
     "build:browserify": "browserify src/foo.js -t babelify -o dist/browserify.bundle.js",
     "build:webpack": "webpack",
     "clean": "rimraf dist .tmp && mkdir dist",
@@ -65,6 +64,7 @@
     "lint": "npm-run-all -p lint:*",
     "lint:flow": "flow",
     "lint:js": "eslint . --cache",
+    "preappveyor:test": "babel src  --out-dir .tmp/src/ && babel test --out-dir .tmp/test/",
     "prebuild": "npm run clean",
     "predeploy": "npm run build",
     "prepush": "npm test",
