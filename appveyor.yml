@@ -7,5 +7,5 @@ install:
 test_script:
   - node --version
   - npm --version
-  - npm test
+  - npm test:tmp
 build: off

@@ -9,6 +9,7 @@
   "dependencies": {},
   "devDependencies": {
     "@9renpoto/eslint-config-flowtype": "^0.1.1",
+    "babel-cli": "^6.24.0",
     "babel-loader": "^6.3.1",
     "babel-plugin-istanbul": "^4.0.0",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
@@ -53,9 +54,10 @@
   },
   "scripts": {
     "build": "npm-run-all -p build:*",
+    "build:babel": "babel src  --out-dir .tmp/src/ && babel test --out-dir .tmp/test/",
     "build:browserify": "browserify src/foo.js -t babelify -o dist/browserify.bundle.js",
     "build:webpack": "webpack",
-    "clean": "rimraf dist && mkdir dist",
+    "clean": "rimraf dist .tmp && mkdir dist",
     "coverage:karma": "codecov -f ./coverage/Firefox*/lcov.info",
     "coverage:mocha": "",
     "deploy": "ghpages --path dist",
@@ -68,6 +70,7 @@
     "test": "npm-run-all -p test:*",
     "test:karma": "karma start",
     "test:lint": "npm run lint",
-    "test:mocha": "nyc mocha -- test"
+    "test:mocha": "nyc mocha -- test",
+    "test:tmp": "nyc mocha -- .tmp/test"
   }
 }
