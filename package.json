@@ -53,6 +53,7 @@
     "url": "git+ssh://git@github.com/9renpoto/js.git"
   },
   "scripts": {
+    "appveyor:test": "nyc mocha -- .tmp/test",
     "build": "npm-run-all -p build:*",
     "build:babel": "babel src  --out-dir .tmp/src/ && babel test --out-dir .tmp/test/",
     "build:browserify": "browserify src/foo.js -t babelify -o dist/browserify.bundle.js",
@@ -70,7 +71,6 @@
     "test": "npm-run-all -p test:*",
     "test:karma": "karma start",
     "test:lint": "npm run lint",
-    "test:mocha": "nyc mocha -- test",
-    "test:tmp": "nyc mocha -- .tmp/test"
+    "test:mocha": "nyc mocha -- test"
   }
 }
