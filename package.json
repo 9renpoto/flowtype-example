@@ -53,11 +53,11 @@
     "url": "git+ssh://git@github.com/9renpoto/js.git"
   },
   "scripts": {
-    "appveyor:test": "nyc mocha -- .tmp/test",
+    "appveyor:test": "nyc mocha --opts .tmp/test/ .tmp/test",
     "build": "npm-run-all -p build:*",
     "build:browserify": "browserify src/foo.js -t babelify -o dist/browserify.bundle.js",
     "build:webpack": "webpack",
-    "clean": "rimraf dist .tmp && mkdir dist",
+    "clean": "rimraf dist .tmp/src .tmp/test/*.js && mkdir dist",
     "coverage:karma": "codecov -f ./coverage/Firefox*/lcov.info",
     "coverage:mocha": "",
     "deploy": "ghpages --path dist",
@@ -71,6 +71,6 @@
     "test": "npm-run-all -p test:*",
     "test:karma": "karma start",
     "test:lint": "npm run lint",
-    "test:mocha": "nyc mocha --require babel-register test"
+    "test:mocha": "nyc mocha --opts test/mocha.opts test"
   }
 }
