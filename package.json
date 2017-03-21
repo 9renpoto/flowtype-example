@@ -71,6 +71,6 @@
     "test": "npm-run-all -p test:*",
     "test:karma": "karma start",
     "test:lint": "npm run lint",
-    "test:mocha": "nyc mocha -- test"
+    "test:mocha": "nyc mocha --require babel-register test"
   }
 }
