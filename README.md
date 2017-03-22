@@ -1,10 +1,8 @@
 # @9renpoto/js
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/9renpoto/js.svg)](https://greenkeeper.io/)
-
 study frontend with flow-type
 
-[![codecov][codedov-image]][codecov-url] [![Travis Build Status][travis-image]][travis-url] [![Dependency Status][david-dm-image]][david-dm-url] [![devDependency Status][dev-david-dm-image]][dev-david-dm-url]
+[![codecov][codedov-image]][codecov-url] [![Travis Build Status][travis-image]][travis-url] [![Build status](https://ci.appveyor.com/api/projects/status/v33mg9oa2f5erqi7?svg=true)](https://ci.appveyor.com/project/9renpoto/js) [![Dependency Status][david-dm-image]][david-dm-url] [![devDependency Status][dev-david-dm-image]][dev-david-dm-url] [![Greenkeeper badge](https://badges.greenkeeper.io/9renpoto/js.svg)](https://greenkeeper.io/)
 
 ## Feature
 
