@@ -9,6 +9,7 @@
   "dependencies": {},
   "devDependencies": {
     "@9renpoto/eslint-config-flowtype": "^0.1.1",
+    "babel-cli": "^6.24.0",
     "babel-loader": "^6.3.1",
     "babel-plugin-istanbul": "^4.0.0",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
@@ -52,22 +53,24 @@
     "url": "git+ssh://git@github.com/9renpoto/js.git"
   },
   "scripts": {
+    "appveyor:test": "nyc mocha --opts .tmp/test/ .tmp/test",
     "build": "npm-run-all -p build:*",
     "build:browserify": "browserify src/foo.js -t babelify -o dist/browserify.bundle.js",
     "build:webpack": "webpack",
-    "clean": "rimraf dist && mkdir dist",
+    "clean": "rimraf dist .tmp/src .tmp/test/*.js && mkdir dist",
     "coverage:karma": "codecov -f ./coverage/Firefox*/lcov.info",
     "coverage:mocha": "",
     "deploy": "ghpages --path dist",
     "lint": "npm-run-all -p lint:*",
     "lint:flow": "flow",
     "lint:js": "eslint . --cache",
+    "preappveyor:test": "babel src  --out-dir .tmp/src/ && babel test --out-dir .tmp/test/",
     "prebuild": "npm run clean",
     "predeploy": "npm run build",
     "prepush": "npm test",
     "test": "npm-run-all -p test:*",
     "test:karma": "karma start",
     "test:lint": "npm run lint",
-    "test:mocha": "nyc mocha -- test"
+    "test:mocha": "nyc mocha --opts test/mocha.opts test"
   }
 }
