@@ -37,7 +37,7 @@
     "phantomjs-prebuilt": "^2.1.14",
     "power-assert": "^1.4.2",
     "rimraf": "^2.5.4",
-    "webpack": "^2.3.0",
+    "webpack": "^2.3.2",
     "webpack-closure-compiler": "^2.1.4",
     "webpack-dev-server": "^2.4.2"
   },
