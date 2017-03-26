@@ -9,9 +9,6 @@
     "development": {
       "presets": [
         "power-assert"
-      ],
-      "plugins": [
-        "istanbul"
       ]
     }
   }

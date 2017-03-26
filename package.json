@@ -16,6 +16,7 @@
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-preset-latest": "^6.24.0",
     "babel-preset-power-assert": "^1.0.0",
+    "babel-register": "^6.24.0",
     "babelify": "^7.3.0",
     "browserify": "^14.0.0",
     "codecov": "^2.1.0",
@@ -42,6 +43,9 @@
     "webpack-closure-compiler": "^2.1.4",
     "webpack-dev-server": "^2.4.2"
   },
+  "directories": {
+    "test": "test"
+  },
   "homepage": "https://github.com/9renpoto/js#readme",
   "keywords": [
     "flow-type"
@@ -54,6 +58,7 @@
     "url": "git+ssh://git@github.com/9renpoto/js.git"
   },
   "scripts": {
+    "appveyor": "mocha .tmp/test",
     "build": "npm-run-all -p build:*",
     "build:browserify": "browserify src/foo.js -t babelify -o dist/browserify.bundle.js",
     "build:webpack": "webpack",
@@ -64,13 +69,13 @@
     "lint": "npm-run-all -p lint:*",
     "lint:flow": "flow",
     "lint:js": "eslint . --cache",
+    "preappveyor": "babel src -d .tmp/src && babel test -d .tmp/test",
     "prebuild": "npm run clean",
     "predeploy": "npm run build",
     "prepush": "npm test",
-    "pretest:mocha": "babel src -d .tmp/src && babel test -d .tmp/test",
     "test": "npm-run-all -p test:*",
     "test:karma": "karma start",
     "test:lint": "npm run lint",
-    "test:mocha": "nyc mocha .tmp/test"
+    "test:mocha": "nyc mocha --require babel-register -- test"
   }
 }
