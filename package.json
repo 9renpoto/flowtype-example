@@ -60,8 +60,8 @@
   },
   "scripts": {
     "appveyor": "npm-run-all -p appveyor:*",
+    "appveyor:mocha": "nyc mocha -- tmp/test",
     "appveyor:karma": "karma start --browsers=IE --files=pattern tmp/test/*.test.js",
-    "build": "npm-run-all -p build:*",
     "build:browserify": "browserify src/foo.js -t babelify -o dist/browserify.bundle.js",
     "build:webpack": "webpack",
     "clean": "rimraf coverage dist tmp",
@@ -71,7 +71,6 @@
     "lint": "npm-run-all -p lint:*",
     "lint:flow": "flow",
     "lint:js": "eslint . --cache",
-    "preappveyor": "nyc mocha -- tmp/test",
     "preappveyor:mocha": "npm run clean",
     "preappveyor:karma": "babel src -d tmp/src && babel test -d tmp/test",
     "prebuild": "npm run clean",
