@@ -6,5 +6,5 @@ install:
 
 test_script:
   - npm run clean
-  - npm run test:mocha
+  - npm run appveyor
 build: off
