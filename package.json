@@ -62,6 +62,7 @@
     "appveyor": "npm-run-all -p appveyor:*",
     "appveyor:mocha": "nyc mocha -- tmp/test",
     "appveyor:karma": "karma start --browsers=IE --files=pattern tmp/test/*.test.js",
+    "build": "npm-run-all -p build:*",
     "build:browserify": "browserify src/foo.js -t babelify -o dist/browserify.bundle.js",
     "build:webpack": "webpack",
     "clean": "rimraf coverage dist",
