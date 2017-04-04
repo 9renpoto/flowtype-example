@@ -22,7 +22,7 @@
     "codecov": "^2.1.0",
     "coveralls": "^2.11.16",
     "eslint": "^3.18.0",
-    "flow-bin": "^0.42.0",
+    "flow-bin": "^0.43.0",
     "flow-typed": "^2.0.0",
     "ghpages": "0.0.10",
     "husky": "^0.13.3",
