@@ -2,7 +2,7 @@
 const ClosureCompilerPlugin = require('webpack-closure-compiler')
 const path = require('path')
 
-const module = require('./webpack/module')
+const m = require('./webpack/module')
 
 module.exports = {
   entry: {
@@ -13,7 +13,7 @@ module.exports = {
     path: path.join(__dirname, 'dist/'),
     filename: '[name].bundle.js'
   },
-  module,
+  module: m,
   plugins: [
     new ClosureCompilerPlugin({
       compiler: {
