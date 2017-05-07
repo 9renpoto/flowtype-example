@@ -3,9 +3,7 @@ const m = require('./webpack/module')
 module.exports = function (config) {
   config.set({
     frameworks: ['mocha'],
-    files: [
-      { pattern: 'test/*.js' }
-    ],
+    files: [{ pattern: 'test/*.js' }],
     preprocessors: {
       'test/*.js': ['webpack']
     },
@@ -14,10 +12,7 @@ module.exports = function (config) {
       node: { fs: 'empty' }
     },
     coverageReporter: {
-      reporters: [
-        {type: 'lcov'},
-        {type: 'text'}
-      ]
+      reporters: [{ type: 'lcov' }, { type: 'text' }]
     },
     reporters: ['mocha', 'coverage'],
     browsers: ['Firefox', 'PhantomJS'],
