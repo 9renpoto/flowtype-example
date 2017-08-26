@@ -1,6 +1,8 @@
+allure-results/
 dist/
 flow-typed/
 package-lock.json
+reports/
 tmp/
 
 ### https://raw.github.com/github/gitignore/ed91cc6c01cb044505585b8aa77d8e017bffece7/Node.gitignore
