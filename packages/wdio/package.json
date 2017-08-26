@@ -2,6 +2,8 @@
   "name": "@9renpoto/wdio",
   "version": "0.0.1",
   "devDependencies": {
+    "flow-bin": "^0.53.1",
+    "flow-typed": "^2.1.5",
     "wdio-allure-reporter": "^0.1.2",
     "wdio-concise-reporter": "^0.1.2",
     "wdio-dot-reporter": "0.0.9",

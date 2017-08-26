@@ -6,6 +6,8 @@
     "babel-preset-power-assert": "^1.0.0",
     "babelify": "^7.3.0",
     "browserify": "^14.4.0",
+    "flow-bin": "^0.53.1",
+    "flow-typed": "^2.1.5",
     "karma": "^1.7.0",
     "karma-chrome-launcher": "^2.1.1",
     "karma-coverage": "^1.1.1",
