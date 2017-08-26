@@ -6,49 +6,24 @@
   "bugs": {
     "url": "https://github.com/9renpoto/js/pulls"
   },
-  "dependencies": {},
   "devDependencies": {
     "@9renpoto/eslint-config-flowtype": "^0.5.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.0",
-    "babel-plugin-istanbul": "^4.1.4",
-    "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-preset-env": "^1.5.2",
-    "babel-preset-power-assert": "^1.0.0",
-    "babel-register": "^6.24.1",
-    "babelify": "^7.3.0",
-    "browserify": "^14.4.0",
     "codecov": "^2.2.0",
     "coveralls": "^2.13.1",
     "eslint": "^4.0.0",
     "flow-bin": "^0.53.0",
     "flow-typed": "^2.1.2",
-    "ghpages": "0.0.10",
     "husky": "^0.14.0",
-    "karma": "^1.7.0",
-    "karma-chrome-launcher": "^2.1.1",
-    "karma-coverage": "^1.1.1",
-    "karma-firefox-launcher": "^1.0.1",
-    "karma-ie-launcher": "^1.0.0",
-    "karma-mocha": "^1.3.0",
-    "karma-mocha-reporter": "^2.2.3",
-    "karma-phantomjs-launcher": "^1.0.4",
-    "karma-webpack": "^2.0.3",
+    "lerna": "^2.1.0",
     "lint-staged": "^4.0.0",
-    "mocha": "^3.4.2",
     "npm-run-all": "^4.0.2",
     "nyc": "^11.0.1",
-    "phantomjs-prebuilt": "^2.1.14",
-    "power-assert": "^1.4.4",
     "prettier-eslint-cli": "^4.1.1",
-    "rimraf": "^2.6.1",
-    "webpack": "^3.0.0",
-    "webpack-closure-compiler": "^2.1.4",
-    "webpack-dev-server": "^2.5.0"
-  },
-  "directories": {
-    "test": "test"
+    "rimraf": "^2.6.1"
   },
   "homepage": "https://github.com/9renpoto/js#readme",
   "keywords": [
@@ -56,41 +31,28 @@
   ],
   "license": "MIT",
   "lint-staged": {
-    "*.js": [
+    "*.{js,jsx}": [
       "prettier-eslint --write",
       "eslint --cache",
       "git add"
+    ],
+    "package.json": [
+      "fixpack",
+      "git add"
     ]
   },
-  "main": "index.js",
+  "main": "n/a",
   "private": true,
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/9renpoto/js.git"
   },
   "scripts": {
-    "appveyor": "npm-run-all -p appveyor:*",
-    "appveyor:karma": "karma start --browsers=IE,Chrome,Firefox --files-pattern=tmp/test/*.test.js",
-    "appveyor:mocha": "nyc mocha -- tmp/test",
-    "build": "npm-run-all -p build:*",
-    "build:browserify": "mkdir dist && NODE_ENV=production browserify src/foo.js -t babelify -o dist/browserify.bundle.js",
-    "build:webpack": "NODE_ENV=production webpack",
-    "clean": "rimraf coverage dist",
-    "coverage:karma": "codecov -f ./coverage/Firefox*/lcov.info",
-    "coverage:mocha": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "deploy": "ghpages --path dist",
-    "lint": "npm-run-all -p lint:*",
-    "lint:flow": "flow",
-    "lint:js": "eslint . --cache",
-    "preappveyor": "babel src -d tmp/src && babel test -d tmp/test",
-    "prebuild": "npm run clean",
+    "coverage": "lerna run coverage",
+    "lint": "lerna run lint",
+    "postinstall": "lerna bootstrap && flow-typed install",
     "precommit": "lint-staged",
-    "predeploy": "npm run build",
     "prepush": "npm test",
-    "test": "npm-run-all -p test:*",
-    "test:build": "npm run build",
-    "test:karma": "karma start",
-    "test:lint": "npm run lint",
-    "test:mocha": "nyc mocha --require babel-register -- test"
+    "test": "lerna run test"
   }
 }
