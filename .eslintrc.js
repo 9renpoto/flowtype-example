@@ -1,7 +1,4 @@
 /* @flow */
 module.exports = {
-  extends: ['@9renpoto/eslint-config-flowtype'],
-  rules: {
-    'no-console': 0
-  }
+  extends: ['@9renpoto/eslint-config-flowtype']
 }
