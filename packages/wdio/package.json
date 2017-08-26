@@ -2,6 +2,7 @@
   "name": "@9renpoto/wdio",
   "version": "0.0.1",
   "devDependencies": {
+    "chai": "^4.1.1",
     "flow-bin": "^0.53.1",
     "flow-typed": "^2.1.5",
     "wdio-allure-reporter": "^0.1.2",
@@ -23,7 +24,8 @@
   "scripts": {
     "coverage": "",
     "lint": "run-p lint:*",
-    "lint:eslint": "eslint . --cache",
+    "lint:es": "eslint . --cache",
+    "lint:flow": "flow",
     "postinstall": "flow-typed install",
     "test": "wdio"
   }

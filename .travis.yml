@@ -22,8 +22,7 @@ before_install:
 script:
 - yarn $CMD
 after_success:
-- yarn coverage
-- '[ "$TRAVIS_BRANCH" == master ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && npm run deploy'
+- '[ "$CMD" == "test" ] && yarn coverage'
 notifications:
   email: false
   slack:
