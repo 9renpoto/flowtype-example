@@ -22,6 +22,7 @@
     "coverage": "",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint . --cache",
+    "postinstall": "flow-typed install",
     "test": "wdio"
   }
 }
