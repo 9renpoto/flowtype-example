@@ -23,10 +23,10 @@
   "private": true,
   "scripts": {
     "coverage": "",
+    "flow-typed": "flow-typed install",
     "lint": "run-p lint:*",
     "lint:es": "eslint . --cache",
     "lint:flow": "flow",
-    "postinstall": "flow-typed install",
     "test": "wdio"
   }
 }
