@@ -1,0 +1,13 @@
+{
+  "extends": "../../.babelrc",
+  "env": {
+    "development": {
+      "presets": [
+        "power-assert"
+      ],
+      "plugins": [
+        "istanbul"
+      ]
+    }
+  }
+}

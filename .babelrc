@@ -1,18 +1,6 @@
 {
-  "plugins": [
-    "transform-flow-strip-types"
-  ],
   "presets": [
-    "env"
-  ],
-  "env": {
-    "development": {
-      "presets": [
-        "power-assert"
-      ],
-      "plugins": [
-        "istanbul"
-      ]
-    }
-  }
+    "env",
+    "flow"
+  ]
 }
