@@ -23,7 +23,7 @@
   "private": true,
   "scripts": {
     "coverage": "",
-    "flow-typed": "flow-typed install",
+    "flow-typed": "flow-typed install -s",
     "lint": "run-p lint:*",
     "lint:es": "eslint . --cache",
     "lint:flow": "flow",

@@ -36,7 +36,7 @@
     "build:browserify": "mkdir dist && cross-env NODE_ENV=production browserify src/foo.js -t babelify -o dist/browserify.bundle.js",
     "build:webpack": "cross-env NODE_ENV=production webpack",
     "coverage": "codecov -f ./coverage/Firefox*/lcov.info",
-    "flow-typed": "flow-typed install",
+    "flow-typed": "flow-typed install -s",
     "lint": "run-p lint:*",
     "lint:es": "eslint . --cache --ext=js,jsx",
     "lint:flow": "flow",
