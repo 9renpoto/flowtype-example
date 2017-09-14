@@ -49,7 +49,9 @@
   },
   "scripts": {
     "coverage": "lerna run coverage",
-    "lint": "lerna run flow-typed && lerna run lint",
+    "lint": "lerna run lint",
+    "lint:eslint": "lerna run eslint",
+    "lint:flow": "lerna run flow-typed && lerna run flow",
     "postinstall": "lerna bootstrap",
     "precommit": "lint-staged",
     "prepush": "npm test",

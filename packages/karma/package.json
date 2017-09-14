@@ -38,7 +38,7 @@
     "coverage": "codecov -f ./coverage/Firefox*/lcov.info",
     "flow-typed": "flow-typed install -s",
     "lint": "run-p lint:*",
-    "lint:es": "eslint . --cache --ext=js,jsx",
+    "lint:eslint": "eslint . --cache --ext=js,jsx",
     "lint:flow": "flow",
     "test": "karma start"
   }
