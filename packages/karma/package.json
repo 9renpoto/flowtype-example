@@ -8,7 +8,7 @@
     "browserify": "^14.4.0",
     "flow-bin": "^0.53.1",
     "flow-typed": "^2.1.5",
-    "karma": "^1.7.0",
+    "karma": "^1.7.1",
     "karma-chrome-launcher": "^2.1.1",
     "karma-coverage": "^1.1.1",
     "karma-firefox-launcher": "^1.0.1",
@@ -18,10 +18,10 @@
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-webpack": "^2.0.3",
     "mocha": "^3.4.2",
-    "nyc": "^11.0.1",
+    "nyc": "^11.2.1",
     "phantomjs-prebuilt": "^2.1.14",
     "power-assert": "^1.4.4",
-    "webpack": "^3.0.0",
+    "webpack": "^3.5.6",
     "webpack-closure-compiler": "^2.1.4",
     "webpack-dev-server": "^2.5.0"
   },
@@ -36,9 +36,9 @@
     "build:browserify": "mkdir dist && cross-env NODE_ENV=production browserify src/foo.js -t babelify -o dist/browserify.bundle.js",
     "build:webpack": "cross-env NODE_ENV=production webpack",
     "coverage": "codecov -f ./coverage/Firefox*/lcov.info",
-    "flow-typed": "flow-typed install",
+    "flow-typed": "flow-typed install -s",
     "lint": "run-p lint:*",
-    "lint:es": "eslint . --cache --ext=js,jsx",
+    "lint:eslint": "eslint . --cache --ext=js,jsx",
     "lint:flow": "flow",
     "test": "karma start"
   }

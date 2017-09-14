@@ -6,7 +6,6 @@ const m = require('./webpack/module')
 
 module.exports = {
   entry: {
-    loader: path.join(__dirname, 'src/loader.js'),
     webpack: path.join(__dirname, 'src/foo.js')
   },
   output: {

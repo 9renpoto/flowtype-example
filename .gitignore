@@ -1,7 +1,6 @@
 allure-results/
 dist/
 flow-typed/
-package-lock.json
 reports/
 tmp/
 
