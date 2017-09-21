@@ -15,7 +15,7 @@
     "babel-preset-flow": "^6.23.0",
     "codecov": "^2.3.0",
     "coveralls": "^2.13.1",
-    "eslint": "^4.7.1",
+    "eslint": "^4.7.2",
     "eslint-plugin-fp": "^2.3.0",
     "husky": "^0.14.3",
     "lerna": "^2.2.0",
