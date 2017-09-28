@@ -1,9 +1,15 @@
 environment:
   nodejs_version: "8"
+  matrix:
+  - CMD=test
+  - CMD=lint
 install:
   - ps: Install-Product node $env:nodejs_version
   - yarn
+matrix:
+  fast_finish: true
+  allow_failures:
+    - CMD: lint
 test_script:
-  - npm run lint 
-  - npm run test
+  - npm run $CMD
 build: off
