@@ -11,5 +11,5 @@ matrix:
   allow_failures:
     - CMD: lint
 test_script:
-  - npm run $CMD
+  - npm run $(CMD)
 build: off
