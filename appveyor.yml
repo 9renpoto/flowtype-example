@@ -3,7 +3,8 @@ environment:
 install:
   - ps: Install-Product node $env:nodejs_version
   - yarn
+matrix:
+  fast_finish: true
 test_script:
-  - npm run lint 
   - npm run test
 build: off
