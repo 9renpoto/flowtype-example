@@ -56,7 +56,6 @@
     "lint:flow": "lerna run flow-typed && lerna run flow",
     "postinstall": "lerna bootstrap",
     "precommit": "lint-staged",
-    "prepush": "npm test",
     "test": "lerna run test"
   }
 }
