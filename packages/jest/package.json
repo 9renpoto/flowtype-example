@@ -12,5 +12,13 @@
     "react-test-renderer": "^16.1.1"
   },
   "license": "MIT",
-  "main": "index.js"
+  "main": "index.js",
+  "scripts": {
+    "coverage": "",
+    "flow-typed": "flow-typed install -s",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint . --cache",
+    "lint:flow": "flow",
+    "test": "jest"
+  }
 }
