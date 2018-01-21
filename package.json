@@ -38,6 +38,10 @@
       "eslint --cache",
       "git add"
     ],
+    "*.md": [
+      "prettier --write",
+      "git add"
+    ],
     "package.json": [
       "fixpack",
       "git add"
