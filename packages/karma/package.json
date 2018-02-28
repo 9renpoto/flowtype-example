@@ -23,7 +23,7 @@
     "power-assert": "^1.4.4",
     "webpack": "^3.8.1",
     "webpack-closure-compiler": "^2.1.5",
-    "webpack-dev-server": "^2.9.4"
+    "webpack-dev-server": "^3.1.0"
   },
   "directories": {
     "test": "test"
