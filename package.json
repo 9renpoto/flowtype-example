@@ -7,24 +7,27 @@
     "url": "https://github.com/9renpoto/js/pulls"
   },
   "devDependencies": {
-    "@9renpoto/eslint-config-flowtype": "^4.1.0",
-    "@9renpoto/eslint-config-react": "^4.0.0",
+    "@9renpoto/eslint-config-flowtype": "^4.4.0",
+    "@9renpoto/eslint-config-react": "^4.3.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
+    "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "codecov": "^3.0.0",
     "coveralls": "^3.0.0",
-    "eslint": "^4.12.1",
-    "eslint-plugin-jest": "^21.4.2",
+    "eslint": "^4.19.0",
+    "eslint-plugin-jest": "^21.15.0",
+    "fixpack": "^2.3.1",
+    "flow-bin": "^0.68.0",
+    "flow-typed": "^2.4.0",
     "husky": "^0.14.3",
-    "lerna": "^2.5.1",
+    "lerna": "2.9.0",
     "lint-staged": "^7.0.0",
     "npm-run-all": "^4.1.2",
-    "nyc": "^11.3.0",
-    "prettier-eslint-cli": "^4.4.2",
+    "nyc": "^11.6.0",
+    "prettier-eslint-cli": "^4.7.1",
     "rimraf": "^2.6.2"
   },
   "homepage": "https://github.com/9renpoto/js#readme",
@@ -35,14 +38,13 @@
   "lint-staged": {
     "*.{js,jsx}": [
       "prettier-eslint --write",
-      "eslint --cache",
       "git add"
     ],
     "*.md": [
       "prettier --write",
       "git add"
     ],
-    "package.json": [
+    "**/package.json": [
       "fixpack",
       "git add"
     ]
@@ -55,11 +57,12 @@
   },
   "scripts": {
     "coverage": "lerna run coverage",
+    "flow": "flow",
     "lint": "lerna run lint",
-    "lint:eslint": "lerna run eslint",
-    "lint:flow": "lerna run flow-typed && lerna run flow",
-    "postinstall": "lerna bootstrap",
     "precommit": "lint-staged",
     "test": "lerna run test"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

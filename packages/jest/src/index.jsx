@@ -7,13 +7,19 @@ export class App extends Component<{}, void> {
   }
 }
 
-export class AppFailedOver extends Component<{}, void> {
-  constructor (props) {
+type Props = {
+  children: Function
+}
+
+type State = { hasError: boolean }
+
+export class AppFailedOver extends Component<Props, State> {
+  constructor (props: Props) {
     super(props)
     this.state = { hasError: false }
   }
 
-  componentDidCatch (_, info) {
+  componentDidCatch (_: any, info: any) {
     this.setState({ hasError: true })
   }
 
