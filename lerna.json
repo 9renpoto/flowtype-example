@@ -1,7 +1,14 @@
 {
-  "lerna": "2.5.1",
-  "packages": [
-    "packages/*"
-  ],
+  "lerna": "2.9.0",
+  "changelog": {
+    "repo": "userdive/agent.js",
+    "labels": {
+      "enhancement": ":rocket: Enhancement",
+      "bug": ":bug: Bug Fix"
+    },
+    "cacheDir": ".changelog"
+  },
+  "npmClient": "yarn",
+  "useWorkspaces": true,
   "version": "0.0.0"
 }
