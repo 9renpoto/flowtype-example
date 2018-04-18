@@ -9,6 +9,6 @@
     "clean": "rimraf reports",
     "coverage": "",
     "lint": "eslint . --cache",
-    "test": "wdio"
+    "test": ""
   }
 }
