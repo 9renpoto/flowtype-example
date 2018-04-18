@@ -17,7 +17,7 @@ before_install:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
 script:
-- '[ "$CMD" == "flow" ] && flow-typed install -s'
+- npx flow-typed install -s
 - yarn $CMD
 after_success:
 - '[ "$CMD" == "test" ] && yarn coverage'
