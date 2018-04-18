@@ -17,9 +17,9 @@ before_install:
 - sh -e /etc/init.d/xvfb start
 script:
 - npx flow-typed install -s
-- yarn $CMD
+- npm run $CMD
 after_success:
-- '[ "$CMD" == "test" ] && yarn coverage'
+- '[ "$CMD" == "test" ] && npm run coverage'
 notifications:
   email: false
   slack:
