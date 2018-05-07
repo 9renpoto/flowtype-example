@@ -10,7 +10,7 @@
     "@9renpoto/eslint-config-flowtype": "4.4.0",
     "@9renpoto/eslint-config-react": "4.3.0",
     "babel-cli": "6.26.0",
-    "babel-core": "6.26.0",
+    "babel-core": "6.26.3",
     "babel-loader": "7.1.4",
     "babel-plugin-istanbul": "4.1.5",
     "babel-preset-env": "1.6.1",
