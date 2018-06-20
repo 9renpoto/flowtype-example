@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "react": "16.4.0",
-    "react-dom": "16.4.0"
+    "react-dom": "16.4.1"
   },
   "devDependencies": {
     "react-test-renderer": "16.4.1"
