@@ -11,6 +11,7 @@ env:
   matrix:
   - CMD=lint
   - CMD=test
+matrix:
   allow_failures:
   - node_js: stable
 before_install:
