@@ -48,7 +48,7 @@
     "prettier-eslint-cli": "4.7.1",
     "rimraf": "2.6.2",
     "wdio-dot-reporter": "0.0.10",
-    "wdio-mocha-framework": "0.6.1",
+    "wdio-mocha-framework": "0.6.2",
     "wdio-phantomjs-service": "0.2.2",
     "wdio-selenium-standalone-service": "0.0.10",
     "wdio-spec-reporter": "0.1.5",
