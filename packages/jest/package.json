@@ -2,11 +2,11 @@
   "name": "js-jest",
   "version": "0.0.1",
   "dependencies": {
-    "react": "16.4.1",
-    "react-dom": "16.4.1"
+    "react": "16.4.2",
+    "react-dom": "16.4.2"
   },
   "devDependencies": {
-    "react-test-renderer": "16.4.1"
+    "react-test-renderer": "16.4.2"
   },
   "license": "MIT",
   "main": "n/a",
