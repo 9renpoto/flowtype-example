@@ -13,7 +13,7 @@
   "private": true,
   "scripts": {
     "coverage": "",
-    "lint": "eslint . --cache",
+    "lint": "eslint src __tests__ --ext=js,jsx",
     "test": "jest"
   }
 }
