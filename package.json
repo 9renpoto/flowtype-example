@@ -24,6 +24,7 @@
     "codecov": "3.1.0",
     "coveralls": "3.0.2",
     "eslint": "5.9.0",
+    "eslint-plugin-jest": "22.0.0",
     "flow-bin": "0.86.0",
     "flow-typed": "2.5.1",
     "husky": "1.2.0",
@@ -56,11 +57,19 @@
     "webpack-dev-server": "3.1.10"
   },
   "homepage": "https://github.com/9renpoto/js#readme",
-  "keywords": ["flow-type"],
+  "keywords": [
+    "flow-type"
+  ],
   "license": "MIT",
   "lint-staged": {
-    "*.{js,jsx}": ["prettier-eslint --write", "git add"],
-    "*.{md,json}": ["prettier --write", "git add"]
+    "*.{js,jsx}": [
+      "prettier-eslint --write",
+      "git add"
+    ],
+    "*.md": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "main": "n/a",
   "private": true,
