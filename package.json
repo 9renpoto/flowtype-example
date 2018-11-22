@@ -9,26 +9,24 @@
   "devDependencies": {
     "@9renpoto/eslint-config-flowtype": "4.7.0",
     "@9renpoto/eslint-config-react": "4.7.0",
-    "babel-cli": "6.26.0",
-    "babel-core": "6.26.3",
+    "@babel/cli": "7.1.5",
+    "@babel/core": "7.1.6",
+    "@babel/preset-env": "7.1.6",
+    "@babel/preset-flow": "7.0.0",
+    "@babel/preset-react": "7.0.0",
+    "babel-core": "7.0.0-bridge.0",
     "babel-loader": "7.1.5",
     "babel-plugin-istanbul": "5.1.0",
-    "babel-preset-env": "1.6.1",
-    "babel-preset-flow": "6.23.0",
-    "babel-preset-power-assert": "2.0.0",
-    "babel-preset-react": "6.24.1",
+    "babel-preset-power-assert": "3.0.0",
     "babelify": "10.0.0",
     "browserify": "16.2.3",
     "chai": "4.2.0",
     "codecov": "3.1.0",
     "coveralls": "3.0.2",
     "eslint": "5.9.0",
-    "eslint-plugin-jest": "22.0.0",
-    "fixpack": "2.3.1",
     "flow-bin": "0.86.0",
     "flow-typed": "2.5.1",
     "husky": "1.2.0",
-    "jest": "23.6.0",
     "karma": "3.1.1",
     "karma-chrome-launcher": "2.2.0",
     "karma-coverage": "1.1.2",
@@ -58,23 +56,11 @@
     "webpack-dev-server": "3.1.10"
   },
   "homepage": "https://github.com/9renpoto/js#readme",
-  "keywords": [
-    "flow-type"
-  ],
+  "keywords": ["flow-type"],
   "license": "MIT",
   "lint-staged": {
-    "*.{js,jsx}": [
-      "prettier-eslint --write",
-      "git add"
-    ],
-    "*.md": [
-      "prettier --write",
-      "git add"
-    ],
-    "**/package.json": [
-      "fixpack",
-      "git add"
-    ]
+    "*.{js,jsx}": ["prettier-eslint --write", "git add"],
+    "*.{md,json}": ["prettier --write", "git add"]
   },
   "main": "n/a",
   "private": true,
