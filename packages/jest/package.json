@@ -6,6 +6,8 @@
     "react-dom": "16.6.3"
   },
   "devDependencies": {
+    "babel-jest": "23.6.0",
+    "jest": "23.6.0",
     "react-test-renderer": "16.6.3"
   },
   "license": "MIT",
@@ -14,6 +16,6 @@
   "scripts": {
     "coverage": "",
     "lint": "eslint src __tests__ --ext=js,jsx",
-    "test": "jest"
+    "test": "jest --config=jest.config.js"
   }
 }
