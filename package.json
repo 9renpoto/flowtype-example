@@ -45,7 +45,7 @@
     "phantomjs-prebuilt": "2.1.16",
     "power-assert": "1.6.1",
     "prettier-eslint-cli": "4.7.1",
-    "rimraf": "2.6.2",
+    "rimraf": "2.6.3",
     "wdio-dot-reporter": "0.0.10",
     "wdio-mocha-framework": "0.6.4",
     "wdio-phantomjs-service": "0.2.2",
