@@ -6,8 +6,8 @@
     "react-dom": "16.8.6"
   },
   "devDependencies": {
-    "babel-jest": "24.7.1",
-    "jest": "24.7.1",
+    "babel-jest": "24.8.0",
+    "jest": "24.8.0",
     "react-test-renderer": "16.8.6"
   },
   "license": "MIT",
