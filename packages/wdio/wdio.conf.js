@@ -3,9 +3,6 @@ exports.config = {
   capabilities: [
     {
       browserName: 'chrome'
-    },
-    {
-      browserName: 'phantomjs'
     }
   ],
   sync: true,
@@ -13,7 +10,7 @@ exports.config = {
   outputDir: './reports',
   screenshotPath: './errorShots/',
   baseUrl: 'http://localhost',
-  services: ['selenium-standalone', 'phantomjs'],
+  services: ['selenium-standalone'],
   framework: 'mocha',
   reporters: ['dot', 'spec'],
   reporterOptions: {

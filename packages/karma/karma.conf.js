@@ -15,7 +15,7 @@ module.exports = function (config) {
       reporters: [{ type: 'lcov' }, { type: 'text' }]
     },
     reporters: ['mocha', 'coverage'],
-    browsers: ['Firefox', 'PhantomJS'],
+    browsers: ['Firefox'],
     singleRun: true
   })
 }
