@@ -22,7 +22,7 @@
     "browserify": "16.2.3",
     "chai": "4.2.0",
     "codecov": "3.5.0",
-    "coveralls": "3.0.3",
+    "coveralls": "3.0.4",
     "eslint": "5.16.0",
     "eslint-plugin-jest": "22.6.4",
     "flow-bin": "0.100.0",
