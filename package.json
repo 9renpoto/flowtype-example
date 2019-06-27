@@ -27,7 +27,7 @@
     "eslint-plugin-jest": "22.7.1",
     "flow-bin": "0.102.0",
     "flow-typed": "2.5.2",
-    "husky": "2.6.0",
+    "husky": "2.7.0",
     "karma": "4.1.0",
     "karma-chrome-launcher": "2.2.0",
     "karma-coverage": "1.1.2",
