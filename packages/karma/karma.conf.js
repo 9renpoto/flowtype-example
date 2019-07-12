@@ -1,21 +1,21 @@
-const m = require('./webpack/module')
+const m = require("./webpack/module");
 
-module.exports = function (config) {
+module.exports = function(config) {
   config.set({
-    frameworks: ['mocha'],
-    files: [{ pattern: 'test/*.js' }],
+    frameworks: ["mocha"],
+    files: [{ pattern: "test/*.js" }],
     preprocessors: {
-      'test/*.js': ['webpack']
+      "test/*.js": ["webpack"]
     },
     webpack: {
-      module: { loaders: m.loaders },
-      node: { fs: 'empty' }
+      module: { rules: m.rules },
+      node: { fs: "empty" }
     },
     coverageReporter: {
-      reporters: [{ type: 'lcov' }, { type: 'text' }]
+      reporters: [{ type: "lcov" }, { type: "text" }]
     },
-    reporters: ['mocha', 'coverage'],
-    browsers: ['Firefox'],
+    reporters: ["mocha", "coverage"],
+    browsers: ["Firefox"],
     singleRun: true
-  })
-}
+  });
+};
