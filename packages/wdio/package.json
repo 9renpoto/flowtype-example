@@ -7,8 +7,6 @@
   "private": true,
   "scripts": {
     "clean": "rimraf reports",
-    "coverage": "",
-    "lint": "eslint . --cache",
     "test": ""
   }
 }

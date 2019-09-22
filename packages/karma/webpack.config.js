@@ -1,6 +1,6 @@
 /* @flow */
-const ClosureCompilerPlugin = require('webpack-closure-compiler')
 const path = require('path')
+const ClosureCompilerPlugin = require('webpack-closure-compiler')
 
 const m = require('./webpack/module')
 

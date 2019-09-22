@@ -76,7 +76,7 @@
   "scripts": {
     "coverage": "lerna run coverage",
     "flow": "flow",
-    "lint": "lerna run lint",
+    "lint": "eslint . --ext=js,jsx",
     "postinstall": "lerna bootstrap",
     "precommit": "lint-staged",
     "test": "lerna run test"

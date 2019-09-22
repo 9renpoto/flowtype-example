@@ -5,7 +5,14 @@ module.exports = {
     '@9renpoto/eslint-config-flowtype'
   ],
   plugins: ['jest'],
-  env: {
-    'jest/globals': true
+  settings: {
+  'import/resolver': {
+    node: {
+      extensions: [
+        '.js',
+        '.jsx'
+      ]
+    }
   }
+}
 }
