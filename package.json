@@ -53,6 +53,11 @@
     "webpack-dev-server": "3.8.1"
   },
   "homepage": "https://github.com/9renpoto/js#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "keywords": [
     "flow-type"
   ],
@@ -78,7 +83,6 @@
     "flow": "flow",
     "lint": "eslint . --ext=js,jsx",
     "postinstall": "lerna bootstrap",
-    "precommit": "lint-staged",
     "test": "lerna run test"
   }
 }
