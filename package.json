@@ -7,7 +7,7 @@
     "url": "https://github.com/9renpoto/js/pulls"
   },
   "devDependencies": {
-    "@9renpoto/eslint-config-flowtype": "5.0.1",
+    "@9renpoto/eslint-config-flowtype": "5.2.0",
     "@9renpoto/eslint-config-react": "5.2.0",
     "@babel/cli": "7.6.0",
     "@babel/core": "7.6.0",
@@ -22,7 +22,7 @@
     "chai": "4.2.0",
     "codecov": "3.6.1",
     "coveralls": "3.0.6",
-    "eslint": "6.4.0",
+    "eslint": "^5.16.0",
     "eslint-plugin-jest": "22.17.0",
     "flow-bin": "0.108.0",
     "flow-typed": "2.6.1",
@@ -53,6 +53,11 @@
     "webpack-dev-server": "3.8.1"
   },
   "homepage": "https://github.com/9renpoto/js#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "keywords": [
     "flow-type"
   ],
@@ -76,9 +81,8 @@
   "scripts": {
     "coverage": "lerna run coverage",
     "flow": "flow",
-    "lint": "lerna run lint",
+    "lint": "eslint . --ext=js,jsx",
     "postinstall": "lerna bootstrap",
-    "precommit": "lint-staged",
     "test": "lerna run test"
   }
 }

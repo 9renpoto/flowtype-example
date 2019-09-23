@@ -1,11 +1,14 @@
 /* @flow */
 module.exports = {
   extends: [
-    '@9renpoto/eslint-config-react',
-    '@9renpoto/eslint-config-flowtype'
+    "@9renpoto/eslint-config-react",
+    "@9renpoto/eslint-config-flowtype"
   ],
-  plugins: ['jest'],
-  env: {
-    'jest/globals': true
+  settings: {
+    "import/resolver": {
+      node: {
+        extensions: [".js", ".jsx"]
+      }
+    }
   }
-}
+};

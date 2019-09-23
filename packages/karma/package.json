@@ -13,7 +13,6 @@
       "mkdir dist && cross-env NODE_ENV=production browserify src/foo.js -t babelify -o dist/browserify.bundle.js",
     "build:webpack": "webpack --env=production",
     "coverage": "codecov -f ./coverage/Firefox*/lcov.info",
-    "lint": "eslint . --cache --ext=js,jsx",
     "test": "karma start"
   }
 }
