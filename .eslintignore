@@ -2,3 +2,4 @@ dist/
 coverage/
 flow-typed/
 tmp/
+node_modules/
