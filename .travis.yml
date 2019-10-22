@@ -17,6 +17,8 @@ env:
 matrix:
   allow_failures:
   - node_js: stable
+before_install:
+- sudo apt-get install -y g++ build-essential
 script:
 - npx flow-typed install -s
 - npm run $CMD
