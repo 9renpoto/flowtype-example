@@ -1,4 +1,3 @@
-dist: xenial
 language: node_js
 sudo: false
 jdk: oraclejdk8
@@ -7,6 +6,7 @@ services:
 node_js:
 - stable
 - lts/*
+- 10
 addon:
   firefox: latest
   chrome: stable
@@ -17,6 +17,7 @@ env:
 matrix:
   allow_failures:
   - node_js: stable
+  - node_js: lts/*
 script:
 - npx flow-typed install -s
 - npm run $CMD
