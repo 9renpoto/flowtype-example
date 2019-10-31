@@ -6,6 +6,7 @@ services:
 node_js:
 - stable
 - lts/*
+- 10
 addon:
   firefox: latest
   chrome: stable
@@ -15,9 +16,9 @@ env:
   - CMD=test
 matrix:
   allow_failures:
-  - node_js: stable
-before_install:
-- sudo apt-get install g++ build-essential
+  - node_js:
+    - stable
+    - lts/*
 script:
 - npx flow-typed install -s
 - npm run $CMD
