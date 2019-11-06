@@ -1,6 +1,7 @@
 {
   "extends": [
-    "config:js-lib"
+    "config:js-lib",
+    ":pinOnlyDevDependencies"
   ],
   "automerge": true,
   "major": {
