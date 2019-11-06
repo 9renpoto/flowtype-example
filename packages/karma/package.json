@@ -9,8 +9,7 @@
   "private": true,
   "scripts": {
     "build": "run-p build:*",
-    "build:browserify":
-      "mkdir dist && cross-env NODE_ENV=production browserify src/foo.js -t babelify -o dist/browserify.bundle.js",
+    "build:browserify": "mkdir dist && cross-env NODE_ENV=production browserify src/foo.js -t babelify -o dist/browserify.bundle.js",
     "build:webpack": "webpack --env=production",
     "coverage": "codecov -f ./coverage/Firefox*/lcov.info",
     "test": "karma start"

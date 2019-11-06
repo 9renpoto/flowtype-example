@@ -6,9 +6,9 @@
     "react-dom": "16.11.0"
   },
   "devDependencies": {
-    "babel-jest": "24.9.0",
-    "jest": "24.9.0",
-    "react-test-renderer": "16.11.0"
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
+    "react-test-renderer": "^16.11.0"
   },
   "license": "MIT",
   "main": "n/a",
