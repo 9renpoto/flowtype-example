@@ -23,7 +23,7 @@
     "codecov": "3.6.1",
     "coveralls": "3.0.9",
     "eslint": "6.8.0",
-    "eslint-plugin-jest": "23.4.0",
+    "eslint-plugin-jest": "23.5.0",
     "flow-bin": "0.115.0",
     "flow-typed": "2.6.2",
     "husky": "4.0.7",
